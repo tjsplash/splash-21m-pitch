@@ -339,18 +339,34 @@
 
   .predictions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 16px; }
   @media (max-width: 920px) { .predictions-grid { grid-template-columns: 1fr; max-width: 380px; margin-left: auto; margin-right: auto; } }
-  .pred-card { margin: 0; display: flex; flex-direction: column; }
-  .pred-screen {
+  .pred-card { margin: 0; display: flex; flex-direction: column; align-items: center; }
+  .pred-phone {
     position: relative;
-    aspect-ratio: 9 / 16;
-    border-radius: 28px;
-    background: linear-gradient(180deg, #15171c 0%, #0a0a0c 100%);
-    border: 1px solid rgba(255,255,255,.08);
-    box-shadow: 0 30px 60px rgba(0,0,0,.5);
-    overflow: hidden;
-    margin-bottom: 18px;
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 9 / 19.5;
+    background: #0a0a0c;
+    border-radius: 38px;
+    padding: 8px;
+    box-shadow:
+      0 0 0 1.5px #2a2c33 inset,
+      0 30px 60px rgba(0,0,0,.5),
+      0 8px 20px rgba(0,0,0,.3);
+    margin-bottom: 22px;
   }
-  .pred-screen img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .pred-phone-screen {
+    position: relative;
+    width: 100%; height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    background: #000;
+  }
+  .pred-phone-screen img {
+    display: block;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
   .pred-screen .pred-fallback { position: absolute; inset: 0; padding: 28px 22px; display: none; flex-direction: column; color: #fff; }
   .pred-screen.fallback .pred-fallback { display: flex; }
   .pred-fallback .pf-bar { width: 80px; height: 4px; border-radius: 2px; background: rgba(255,255,255,.18); margin: 0 auto 16px; }
@@ -744,63 +760,27 @@
 
     <div class="predictions-grid">
       <figure class="pred-card">
-        <div class="pred-screen">
-          <img src="assets/predictions-hedge.png" alt="Splash app — hedge prompt: trade Miami to win, $1,000 → $4,912" onerror="this.style.display='none'; this.parentElement.classList.add('fallback');" />
-          <div class="pred-fallback">
-            <div class="pf-bar"></div>
-            <div class="pf-title">YOUR ENTRY VALUE IS</div>
-            <div class="pf-amt">$10,254</div>
-            <div class="pf-sep">MAKE SURE YOU WIN, EITHER WAY</div>
-            <div class="pf-team">
-              <img src="https://a.espncdn.com/i/teamlogos/nfl/500/mia.png" alt="" />
-            </div>
-            <div class="pf-q">WANT TO HEDGE?</div>
-            <div class="pf-action">Miami to win<br/><span class="pf-price">$1,000 → <strong>$4,912</strong></span></div>
+        <div class="pred-phone">
+          <div class="pred-phone-screen">
+            <img src="assets/predictions-hedge.png" alt="Splash app — hedge prompt: trade Miami to win, $1,000 → $4,912" />
           </div>
         </div>
         <figcaption><strong>Hedge live during the season.</strong> Splash detects your entry's value and lets you lock in a winning outcome via Polymarket markets — without leaving the app.</figcaption>
       </figure>
 
       <figure class="pred-card">
-        <div class="pred-screen">
-          <img src="assets/predictions-markets.png" alt="Splash Markets browse — NFL, NBA, NHL, CFB, Golf, Boxing" onerror="this.style.display='none'; this.parentElement.classList.add('fallback');" />
-          <div class="pred-fallback alt">
-            <div class="pf-bar"></div>
-            <div class="pf-title small">Markets</div>
-            <div class="pf-tabs"><span>NFL</span><span>NBA</span><span>NHL</span><span>CFB</span><span>Golf</span></div>
-            <div class="pf-mkt">
-              <div class="pf-mkt-row"><span class="pf-team-sm">SEA</span><span>14</span><span class="pf-pct">76%</span></div>
-              <div class="pf-mkt-row"><span class="pf-team-sm">LAR</span><span>#7</span><span class="pf-pct">22%</span></div>
-            </div>
-            <div class="pf-mkt">
-              <div class="pf-mkt-row"><span class="pf-team-sm">DEN</span><span>23</span><span class="pf-pct">11%</span></div>
-              <div class="pf-mkt-row"><span class="pf-team-sm">NE</span><span>#34</span><span class="pf-pct">88%</span></div>
-            </div>
+        <div class="pred-phone">
+          <div class="pred-phone-screen">
+            <img src="assets/predictions-markets.png" alt="Splash Markets browse — NFL, NBA, NHL, CFB, Golf, Boxing" />
           </div>
         </div>
         <figcaption><strong>Trade any market, any time.</strong> Real-time NFL futures, game lines, props — all in one feed. Powered by Polymarket liquidity.</figcaption>
       </figure>
 
       <figure class="pred-card">
-        <div class="pred-screen">
-          <img src="assets/predictions-game.png" alt="NE vs SEA live game view with price chart and game lines" onerror="this.style.display='none'; this.parentElement.classList.add('fallback');" />
-          <div class="pred-fallback alt2">
-            <div class="pf-bar"></div>
-            <div class="pf-game-head">
-              <span class="pf-team-sm">NE</span>
-              <span class="pf-vs">Tomorrow<br/>6:30 PM</span>
-              <span class="pf-team-sm">SEA</span>
-            </div>
-            <div class="pf-chart">
-              <svg viewBox="0 0 200 80" preserveAspectRatio="none">
-                <path d="M0,60 Q40,40 60,45 T120,30 T200,18" fill="none" stroke="#4ade80" stroke-width="2"/>
-                <path d="M0,20 Q40,40 60,35 T120,50 T200,62" fill="none" stroke="#f87171" stroke-width="2"/>
-              </svg>
-            </div>
-            <div class="pf-buttons">
-              <span class="pf-btn red">NE TO WIN<br/>20%</span>
-              <span class="pf-btn green">SEA TO WIN<br/>80%</span>
-            </div>
+        <div class="pred-phone">
+          <div class="pred-phone-screen">
+            <img src="assets/predictions-game.png" alt="NE vs SEA live game view with price chart and game lines" />
           </div>
         </div>
         <figcaption><strong>Double down on what you believe.</strong> Live odds update through every snap. Convert insight into a position the moment you see it.</figcaption>
