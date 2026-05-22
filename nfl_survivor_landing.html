@@ -343,29 +343,32 @@
   .pred-phone {
     position: relative;
     width: 100%;
-    max-width: 280px;
+    max-width: 240px;
     aspect-ratio: 9 / 19.5;
-    background: #0a0a0c;
-    border-radius: 38px;
-    padding: 8px;
+    background: linear-gradient(180deg, #1a1c20 0%, #0a0a0c 100%);
+    border-radius: 36px;
+    padding: 11px;
     box-shadow:
       0 0 0 1.5px #2a2c33 inset,
-      0 30px 60px rgba(0,0,0,.5),
-      0 8px 20px rgba(0,0,0,.3);
+      0 0 0 1.5px rgba(255,255,255,.04),
+      0 26px 50px rgba(0,0,0,.55),
+      0 10px 20px rgba(0,0,0,.3);
     margin-bottom: 22px;
   }
   .pred-phone-screen {
     position: relative;
     width: 100%; height: 100%;
-    border-radius: 30px;
+    border-radius: 26px;
     overflow: hidden;
     background: #000;
+    display: flex; align-items: center; justify-content: center;
   }
   .pred-phone-screen img {
     display: block;
     width: 100%; height: 100%;
-    object-fit: cover;
-    object-position: top center;
+    object-fit: contain;
+    object-position: center;
+    background: #000;
   }
   .pred-screen .pred-fallback { position: absolute; inset: 0; padding: 28px 22px; display: none; flex-direction: column; color: #fff; }
   .pred-screen.fallback .pred-fallback { display: flex; }
