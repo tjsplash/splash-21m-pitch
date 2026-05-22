@@ -466,6 +466,98 @@
   .footer-links a:hover { color: #fff; }
   .footer-fine { font-size: 12px; color: var(--ink-3); line-height: 1.6; max-width: 920px; }
   .footer-fine strong { color: #cbd0d8; }
+
+  /* ===== MOBILE OPTIMIZATIONS ===== */
+  @media (max-width: 760px) {
+    .topbar { padding: 0 14px; }
+    .topbar-inner { gap: 10px; }
+    .topnav { display: none; }
+    .logo-img { height: 20px; }
+    .btn-login { display: none; }
+    .btn-enter-top { padding: 8px 16px; font-size: 13px; white-space: nowrap; }
+    .topright { gap: 8px; }
+
+    /* Hero */
+    .hero-inner { padding: 32px 18px 48px; gap: 28px; }
+    .hero h1 { font-size: 30px; letter-spacing: -.8px; }
+    .hero p.lede { font-size: 15px; }
+    .hero-stats { gap: 12px; padding: 14px 16px; }
+    .hero-stat .v { font-size: 17px; }
+    .hero-stat .l { font-size: 9px; }
+    .btn-hero-primary, .btn-hero-secondary { padding: 13px 20px; font-size: 14px; }
+    .hero-poster { max-width: 320px; margin: 0 auto; }
+
+    /* Countdown strip */
+    .countdown-strip { padding: 18px 14px; }
+    .countdown-strip-inner { gap: 14px; }
+    .countdown-strip .cd-headline { font-size: 14px; }
+    .countdown-strip .cd-num { font-size: 22px; }
+    .countdown-strip .cd-cell { padding: 8px 12px; min-width: 60px; }
+
+    /* Stats band */
+    .stats-band { padding: 36px 18px; }
+    .stat .v { font-size: 36px; }
+    .stat .l { font-size: 11px; }
+
+    /* Sections */
+    section { padding: 56px 18px; }
+    .section-title { font-size: 26px; letter-spacing: -.5px; }
+    .section-sub { font-size: 15px; }
+
+    /* VS comparison */
+    .vs-card { padding: 22px 18px; }
+    .vs-row { font-size: 13px; gap: 10px; padding: 12px 0; }
+    .vs-name { font-size: 18px; }
+
+    /* How to Play card */
+    .htp-card { padding: 18px; }
+    .htp-card-head { margin-bottom: 14px; }
+    .htp-card-head .ttl { font-size: 15px; }
+    .htp-week { padding: 12px 12px; gap: 10px; }
+    .htp-week .pick .info .team { font-size: 14px; }
+    .htp-week .pick .info .vs { font-size: 11px; }
+    .htp-week .badge { font-size: 10px; padding: 4px 9px; }
+    .htp-week-cta .cta-body .cta-t { font-size: 14px; }
+    .htp-week-cta .cta-body .cta-s { font-size: 12px; }
+
+    /* Partner band */
+    .partner-band { padding: 36px 14px; }
+    .partner-inner { padding: 32px 22px; }
+    .partner-inner h2 { font-size: 24px; }
+    .partner-inner p { font-size: 14px; }
+    .partner-bullets li .t { font-size: 15px; }
+    .partner-bullets li .s { font-size: 13px; }
+
+    /* Get Started cards */
+    .how-card { padding: 22px 18px; }
+    .how-card h3 { font-size: 16px; }
+    .how-card p { font-size: 13px; }
+
+    /* Predictions section */
+    .predictions-section { padding: 56px 18px; }
+    .predictions-grid { gap: 24px; }
+    .pred-phone { max-width: 220px; }
+    .pred-card figcaption { font-size: 13px; }
+
+    /* CTA section */
+    .cta-section { padding: 56px 18px; }
+    .cta-section h2 { font-size: 30px; }
+    .cta-section p { font-size: 15px; }
+
+    /* FAQ */
+    .faq-item { padding: 16px 18px; }
+    .faq-item summary { font-size: 14px; }
+    .faq-item p { font-size: 13px; }
+
+    /* Footer */
+    footer { padding: 36px 18px 24px; }
+    .footer-top { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .footer-fine { font-size: 11px; }
+  }
+  @media (max-width: 420px) {
+    .hero h1 { font-size: 26px; }
+    .section-title { font-size: 22px; }
+  }
 </style>
 </head>
 <body>

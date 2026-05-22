@@ -570,6 +570,65 @@
     color: #9aa0a6;
     font-size: 13px;
   }
+
+  /* ===== MOBILE OPTIMIZATIONS ===== */
+  @media (max-width: 760px) {
+    .topbar { padding: 0 14px; }
+    .topbar-inner { gap: 10px; }
+    .topnav { display: none; }
+    .logo-img { height: 20px; }
+    .btn-login { padding: 8px 14px; font-size: 12px; white-space: nowrap; }
+
+    /* Page padding */
+    .content-wrap { padding: 0 14px; }
+    .breadcrumb { padding: 10px 14px; }
+    .contest-body { padding: 16px 0 48px; }
+    .contest-body .contest-grid,
+    .page-layout { padding: 0 14px; }
+
+    /* Contest head */
+    .contest-head { padding: 0 0 18px; }
+    .contest-head .inner { padding: 0 14px; }
+    .contest-head .pfp { width: 64px; height: 64px; border-radius: 16px; margin-top: 24px; font-size: 16px; border-width: 3px; }
+    .contest-head h1.contest-title { font-size: 26px; }
+    .contest-head .meta { gap: 8px 14px; font-size: 13px; }
+    .actions-row { gap: 8px; }
+    .actions-row .btn-primary, .actions-row .btn-outline { height: 38px; padding: 0 14px; font-size: 13px; }
+
+    /* Entrants sidebar — hide on mobile (specificity override) */
+    aside.entrants-sidebar { display: none !important; }
+
+    /* Section headings + cards */
+    h3.section-h { font-size: 19px; margin-bottom: 14px; }
+    .card { padding: 16px; margin-bottom: 22px; }
+    .payout-row { padding: 4px 0; font-size: 15px; }
+    .payout-row .amt { font-size: 15px; }
+    .about-text { font-size: 15px; }
+    .detail-row, .setting-row { padding: 14px 0; }
+    .detail-row .lbl, .detail-row .v, .setting-row .lbl, .setting-row .v { font-size: 14px; }
+    .setting-row .v { max-width: 56%; }
+    .rule-row { padding: 14px 16px; font-size: 14px; }
+
+    /* Ticker — keep visible but tighter */
+    .ticker-header { font-size: 9px; padding: 0 10px; letter-spacing: 1.2px; }
+    .ticker-attr { padding: 3px 8px; }
+    .ticker-attr .lbl { font-size: 8px; }
+    .ticker-attr .poly span { font-size: 11px; }
+    .ticker-attr .poly img { height: 10px; }
+    .trade-pill { font-size: 12px; padding: 5px 12px 5px 6px; }
+    .trade-pill .team-chip { width: 20px; height: 20px; font-size: 8px; }
+    .ticker-track { padding-left: 100px; }
+
+    /* Footer */
+    footer { padding: 36px 18px 24px; }
+    .footer-cols { grid-template-columns: repeat(2, 1fr); gap: 24px; padding-bottom: 24px; }
+    .footer-col h4 { font-size: 12px; margin-bottom: 12px; }
+    .footer-col a { font-size: 13px; padding: 4px 0; }
+  }
+  @media (max-width: 420px) {
+    .contest-head h1.contest-title { font-size: 22px; }
+    .footer-cols { grid-template-columns: 1fr 1fr; }
+  }
 </style>
 </head>
 <body>
