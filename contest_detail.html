@@ -79,73 +79,23 @@
   .banner {
     width: 100%;
     height: 240px;
-    background: linear-gradient(180deg, #0d2b9c 0%, #0a2487 50%, #061e74 100%);
+    background: #061e74;
     position: relative;
     overflow: hidden;
-    color: #fff;
+    line-height: 0;
   }
-  .banner-inner {
-    max-width: 1180px;
-    margin: 0 auto;
-    height: 240px;
-    padding: 18px 28px 72px;
-    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
-    position: relative;
-    z-index: 2;
-  }
-  .banner-splash-logo {
+  .banner img {
     display: block;
-    height: 24px;
-    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
-  .banner-amt {
-    font-size: 60px;
-    font-weight: 900;
-    letter-spacing: -2px;
-    line-height: 1;
-    color: #DCFF1E;
-    text-align: center;
-    margin: 0;
-    text-shadow: 0 4px 16px rgba(0,0,0,.3);
+  @media (max-width: 900px) {
+    .banner { height: 180px; }
   }
-  .banner-ttl {
-    font-size: 22px;
-    font-weight: 800;
-    letter-spacing: -.3px;
-    color: #fff;
-    margin: 6px 0 2px;
-    text-align: center;
-  }
-  .banner-tag {
-    font-size: 12px;
-    letter-spacing: 2.5px;
-    font-weight: 800;
-    color: #DCFF1E;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  /* Sponsored by Polymarket lockup */
-  .banner-sponsor {
-    position: absolute;
-    bottom: 18px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex; align-items: center; gap: 16px;
-  }
-  .banner-sponsor .by {
-    font-size: 14px;
-    letter-spacing: 3px;
-    font-weight: 800;
-    color: #fff;
-    text-transform: uppercase;
-    opacity: .9;
-  }
-  .banner-sponsor .poly-logo { display: flex; align-items: center; gap: 12px; color: #fff; }
-  .banner-sponsor .poly-mark-img { height: 32px; width: auto; display: block; filter: brightness(0) invert(1); }
-  .banner-sponsor .poly-word { font-size: 32px; font-weight: 700; color: #fff; letter-spacing: -.5px; }
   @media (max-width: 600px) {
-    .banner-amt { font-size: 40px; }
-    .banner-ttl { font-size: 16px; }
+    .banner { height: 130px; }
   }
 
   /* ===== LATEST TRADES TICKER ===== */
@@ -642,21 +592,8 @@
 </header>
 
 <!-- ===== BANNER ===== -->
-<section class="banner" aria-label="$21 Million NFL Survivor Contest — The Biggest Contest in the World, Sponsored by Polymarket">
-  <div class="banner-inner">
-    <h2 class="banner-amt">The Big Splash</h2>
-    <div class="banner-ttl">$21 Million Dollar NFL Survivor Contest</div>
-    <div class="banner-tag">The Biggest Contest in the World</div>
-  </div>
-
-  <!-- Sponsored by Polymarket strap pinned to bottom -->
-  <div class="banner-sponsor">
-    <span class="by">Sponsored by</span>
-    <span class="poly-logo">
-      <img class="poly-mark-img" src="assets/polymarket-mark.svg" alt="" aria-hidden="true" />
-      <span class="poly-word">Polymarket</span>
-    </span>
-  </div>
+<section class="banner" aria-label="The Big Splash — $21 Million NFL Survivor Contest, Sponsored by Polymarket">
+  <img src="assets/survivor-banner.png" alt="The Big Splash — $21 Million NFL Survivor Contest. The Biggest Contest in the World. Sponsored by Polymarket." />
 </section>
 
 <!-- ===== LATEST TRADES TICKER ===== -->
